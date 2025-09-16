@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, ShoppingCart, Package, Weight, Star } from 'lucide-react'
+import { ArrowLeft, ShoppingCart, Package, Scale, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { mockStores, mockProducts } from '@/lib/dummy-data'
@@ -114,7 +114,7 @@ export default function ProductPage({ params }: ProductPageProps) {
             <div className="grid grid-cols-2 gap-4 text-sm">
               {product.weight && (
                 <div className="flex items-center space-x-2">
-                  <Weight className="h-4 w-4 text-muted-foreground" />
+                  <Scale className="h-4 w-4 text-muted-foreground" />
                   <span>
                     {product.weight >= 1000
                       ? `${product.weight / 1000}kg`
